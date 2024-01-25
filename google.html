@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="engine">
+    <div class="logodiv">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/408px-Google_2015_logo.svg.png" id="logo">
+    </div>
+    <div class="searchbardiv">
+        <input type="text" id="searchbar" placeholder="Search" onclick="searchfun()">
+        <button id="searchbtn" onclick="searchbtnfun()"><img src="https://www.vhv.rs/dpng/f/80-801530_search-icon-small-png-transparent-png.png" id="searchicon"></button>
+    </div>
+
+</div>
+    <style>
+        #logo{
+            margin-top: 10%;
+            margin-left: 33%;
+        }
+
+        #searchbar{
+            box-shadow: 0px 10px 12px  rgba(0.1,0,0.5,0);
+            border-radius: 5px;
+            padding: 10px;
+            border-color: white;
+            margin-left: 30%;
+           padding-right: 320px;
+        }
+
+        #searchbtn{
+
+            background-color: rgb(250, 249, 249);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            padding-right: 15px;
+            border-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            right: 5px;
+        }
+
+        #searchicon{
+            width: 20px;
+        }
+
+    </style>
+    
+    <script>
+        let arr = [];
+        function searchfun(){
+           let bar = document.getElementById('searchbar');
+           bar.style.borderColor ='white';
+           bar.style.backgroundColor = 'white';
+        }
+
+        function searchbtnfun(){
+            let bar = document.getElementById('searchbar');
+            
+            arr.push(bar.value)
+            console.log(arr);
+            bar.value = ' ';
+            bar.placeholder = 'search';
+        }
+    </script>
+</body>
+</html>
